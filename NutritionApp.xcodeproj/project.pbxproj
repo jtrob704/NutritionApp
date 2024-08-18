@@ -16,6 +16,10 @@
 		FC2049E32C7236FF00BB8F8B /* NutritionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049E22C7236FF00BB8F8B /* NutritionAppTests.swift */; };
 		FC2049ED2C7236FF00BB8F8B /* NutritionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049EC2C7236FF00BB8F8B /* NutritionAppUITests.swift */; };
 		FC2049EF2C7236FF00BB8F8B /* NutritionAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049EE2C7236FF00BB8F8B /* NutritionAppUITestsLaunchTests.swift */; };
+		FC2049FC2C72485500BB8F8B /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049FB2C72485500BB8F8B /* NutritionViewModel.swift */; };
+		FC2049FE2C7267DA00BB8F8B /* Network+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049FD2C7267DA00BB8F8B /* Network+Error.swift */; };
+		FC204A002C72681900BB8F8B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049FF2C72681900BB8F8B /* WebService.swift */; };
+		FC204A022C72706500BB8F8B /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = FC204A012C72706500BB8F8B /* secrets.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		FC2049E82C7236FF00BB8F8B /* NutritionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutritionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2049EC2C7236FF00BB8F8B /* NutritionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionAppUITests.swift; sourceTree = "<group>"; };
 		FC2049EE2C7236FF00BB8F8B /* NutritionAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC2049FB2C72485500BB8F8B /* NutritionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
+		FC2049FD2C7267DA00BB8F8B /* Network+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Error.swift"; sourceTree = "<group>"; };
+		FC2049FF2C72681900BB8F8B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		FC204A012C72706500BB8F8B /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				FC2049CC2C7236FD00BB8F8B /* NutritionAppApp.swift */,
+				FC2049FB2C72485500BB8F8B /* NutritionViewModel.swift */,
 				FC2049CE2C7236FD00BB8F8B /* ContentView.swift */,
+				FC2049FD2C7267DA00BB8F8B /* Network+Error.swift */,
+				FC2049FF2C72681900BB8F8B /* WebService.swift */,
+				FC204A012C72706500BB8F8B /* secrets.json */,
 				FC2049D02C7236FF00BB8F8B /* Assets.xcassets */,
 				FC2049D52C7236FF00BB8F8B /* Persistence.swift */,
 				FC2049D72C7236FF00BB8F8B /* NutritionApp.xcdatamodeld */,
@@ -237,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC204A022C72706500BB8F8B /* secrets.json in Resources */,
 				FC2049D42C7236FF00BB8F8B /* Preview Assets.xcassets in Resources */,
 				FC2049D12C7236FF00BB8F8B /* Assets.xcassets in Resources */,
 			);
@@ -265,7 +278,10 @@
 			files = (
 				FC2049D62C7236FF00BB8F8B /* Persistence.swift in Sources */,
 				FC2049CF2C7236FD00BB8F8B /* ContentView.swift in Sources */,
+				FC204A002C72681900BB8F8B /* WebService.swift in Sources */,
 				FC2049D92C7236FF00BB8F8B /* NutritionApp.xcdatamodeld in Sources */,
+				FC2049FE2C7267DA00BB8F8B /* Network+Error.swift in Sources */,
+				FC2049FC2C72485500BB8F8B /* NutritionViewModel.swift in Sources */,
 				FC2049CD2C7236FD00BB8F8B /* NutritionAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

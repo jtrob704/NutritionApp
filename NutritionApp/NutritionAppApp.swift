@@ -14,6 +14,7 @@ struct NutritionAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(NutritionViewModel())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
