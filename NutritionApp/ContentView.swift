@@ -11,12 +11,12 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var viewModel: NutritionViewModel
-
+    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+    
     var body: some View {
         NavigationView {
             Spacer()
@@ -27,38 +27,42 @@ struct ContentView: View {
                     Task { await viewModel.makeNutritionRequest() }
                 })
                 .buttonStyle(.bordered)
+                Text(viewModel.nutritionApiResults?.text ?? "")
+                Text(viewModel.nutritionApiResults?.hints?[0].food?.label ?? "")
+                AsyncImage(url: URL(string: viewModel.nutritionApiResults?.hints?[0].food?.image ?? ""))
             }
             Spacer()
-//            List {
-//                Text(viewModel.testText)
-//                ForEach(items) { item in
-//                    NavigationLink {
-//                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-//                    } label: {
-//                        Text(item.timestamp!, formatter: itemFormatter)
-//                    }
-//                }
-//                .onDelete(perform: deleteItems)
-//            }
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    EditButton()
-//                }
-//                ToolbarItem {
-//                    Button(action: addItem) {
-//                        Label("Add Item", systemImage: "plus")
-//                    }
-//                }
-//            }
-//            Text("Select an item")
+            //            List {
+            //                Text(viewModel.testText)
+            //                ForEach(items) { item in
+            //                    NavigationLink {
+            //                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+            //                    } label: {
+            //                        Text(item.timestamp!, formatter: itemFormatter)
+            //                    }
+            //                }
+            //                .onDelete(perform: deleteItems)
+            //            }
+            //            .toolbar {
+            //                ToolbarItem(placement: .navigationBarTrailing) {
+            //                    EditButton()
+            //                }
+            //                ToolbarItem {
+            //                    Button(action: addItem) {
+            //                        Label("Add Item", systemImage: "plus")
+            //                    }
+            //                }
+            //            }
+            //            Text("Select an item")
+            //            }
         }
     }
-
+    
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
-
+            
             do {
                 try viewContext.save()
             } catch {
@@ -69,11 +73,11 @@ struct ContentView: View {
             }
         }
     }
-
+    
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
-
+            
             do {
                 try viewContext.save()
             } catch {

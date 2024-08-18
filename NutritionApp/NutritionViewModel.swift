@@ -10,6 +10,7 @@ import Foundation
 class NutritionViewModel: ObservableObject {
     @Published var responseString: String = ""
     @Published var nutritionRequestLoading: Bool = false
+    @Published var nutritionApiResults: NutritionRequestResponse?
     let webService = WebService()
     let parameters: [String: String] = [
         "upc": "020000111964"
@@ -28,27 +29,37 @@ class NutritionViewModel: ObservableObject {
                 }
                 return
             }
-            
             if let data = data {
-                // Process the received data
-                if let responseString = String(data: data, encoding: .utf8) {
-                    print("Response data: \(responseString)")
-                    DispatchQueue.main.async {
-                        self.responseString = responseString
-                        self.nutritionRequestLoading = false
-                    }
-                } else {
-                    print("Failed to convert data to string")
-                    DispatchQueue.main.async {
-                        self.nutritionRequestLoading = false
-                    }
-                }
-            } else {
-                print("No data received")
                 DispatchQueue.main.async {
-                    self.nutritionRequestLoading = false
+                    do {
+                        self.nutritionApiResults = try JSONDecoder().decode(NutritionRequestResponse.self, from: data)
+                        print("NutritionRequestResponse \(self.nutritionApiResults)")
+                        self.nutritionRequestLoading = false
+                    } catch {
+                        print("Failed to decode JSON: \(error.localizedDescription)")
+                        self.nutritionRequestLoading = false
+                    }
                 }
             }
+            //            if let data = data {
+            //                // Process the received data
+            //                DispatchQueue.main.async {
+            //                print("Response data: \(self.responseString)")
+            //                        self.responseString = self.responseString
+            //                        self.nutritionRequestLoading = false
+            //                    }
+            ////                } else {
+            ////                    print("Failed to convert data to string")
+            ////                    DispatchQueue.main.async {
+            ////                        self.nutritionRequestLoading = false
+            ////                    }
+            ////                }
+            //            } else {
+            //                print("No data received")
+            //                DispatchQueue.main.async {
+            //                    self.nutritionRequestLoading = false
+            //                }
+            //            }
         }
     }
 }

@@ -20,6 +20,7 @@
 		FC2049FE2C7267DA00BB8F8B /* Network+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049FD2C7267DA00BB8F8B /* Network+Error.swift */; };
 		FC204A002C72681900BB8F8B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049FF2C72681900BB8F8B /* WebService.swift */; };
 		FC204A022C72706500BB8F8B /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = FC204A012C72706500BB8F8B /* secrets.json */; };
+		FC7C3D8E2C72A83C002A3041 /* NutritionRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D8D2C72A83C002A3041 /* NutritionRequestResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		FC2049FD2C7267DA00BB8F8B /* Network+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Error.swift"; sourceTree = "<group>"; };
 		FC2049FF2C72681900BB8F8B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		FC204A012C72706500BB8F8B /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
+		FC7C3D8D2C72A83C002A3041 /* NutritionRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionRequestResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				FC2049CC2C7236FD00BB8F8B /* NutritionAppApp.swift */,
 				FC2049FB2C72485500BB8F8B /* NutritionViewModel.swift */,
+				FC7C3D8D2C72A83C002A3041 /* NutritionRequestResponse.swift */,
 				FC2049CE2C7236FD00BB8F8B /* ContentView.swift */,
 				FC2049FD2C7267DA00BB8F8B /* Network+Error.swift */,
 				FC2049FF2C72681900BB8F8B /* WebService.swift */,
@@ -281,6 +284,7 @@
 				FC204A002C72681900BB8F8B /* WebService.swift in Sources */,
 				FC2049D92C7236FF00BB8F8B /* NutritionApp.xcdatamodeld in Sources */,
 				FC2049FE2C7267DA00BB8F8B /* Network+Error.swift in Sources */,
+				FC7C3D8E2C72A83C002A3041 /* NutritionRequestResponse.swift in Sources */,
 				FC2049FC2C72485500BB8F8B /* NutritionViewModel.swift in Sources */,
 				FC2049CD2C7236FD00BB8F8B /* NutritionAppApp.swift in Sources */,
 			);
