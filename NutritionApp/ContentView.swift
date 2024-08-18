@@ -29,7 +29,7 @@ struct ContentView: View {
                 .buttonStyle(.bordered)
                 Text(viewModel.nutritionApiResults?.text ?? "")
                 Text(viewModel.nutritionApiResults?.hints?[0].food?.label ?? "")
-                AsyncImage(url: URL(string: viewModel.nutritionApiResults?.hints?[0].food?.image ?? ""))
+//                AsyncImage(url: URL(string: viewModel.nutritionApiResults?.hints?[0].food?.image ?? ""))
             }
             Spacer()
             //            List {
