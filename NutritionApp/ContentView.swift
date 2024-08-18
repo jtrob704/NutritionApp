@@ -26,6 +26,7 @@ struct ContentView: View {
                 Button("Retrieve Data", action: {
                     Task { await viewModel.makeNutritionRequest() }
                 })
+                .buttonStyle(.bordered)
             }
             Spacer()
 //            List {
