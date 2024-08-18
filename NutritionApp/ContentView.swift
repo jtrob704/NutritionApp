@@ -20,9 +20,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Spacer()
-            Button("Retrieve Data", action: {
-                Task { await viewModel.makeNutritionRequest() }
-            })
+            if viewModel.nutritionRequestLoading {
+                ProgressView()
+            } else {
+                Button("Retrieve Data", action: {
+                    Task { await viewModel.makeNutritionRequest() }
+                })
+            }
             Spacer()
 //            List {
 //                Text(viewModel.testText)
