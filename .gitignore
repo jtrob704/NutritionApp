@@ -1,2 +1,8 @@
 
 NutritionApp/secrets.json
+
+NutritionApp.xcodeproj/project.xcworkspace/xcuserdata/jtrobinson.xcuserdatad/
+
+NutritionApp.xcodeproj/xcuserdata/jtrobinson.xcuserdatad/xcschemes/
+
+*.entitlements
