@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		547D0A1C2CE172FB00814D71 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 547D0A1B2CE172FB00814D71 /* CodeScanner */; };
 		5496822C2CE14F0E001F8B57 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5496822B2CE14F08001F8B57 /* MainView.swift */; };
-		5496822E2CE167D2001F8B57 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5496822D2CE167D2001F8B57 /* TestView.swift */; };
+		5496822E2CE167D2001F8B57 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5496822D2CE167D2001F8B57 /* ScanView.swift */; };
 		FC2049CD2C7236FD00BB8F8B /* NutritionAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049CC2C7236FD00BB8F8B /* NutritionAppApp.swift */; };
 		FC2049CF2C7236FD00BB8F8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049CE2C7236FD00BB8F8B /* ContentView.swift */; };
 		FC2049D12C7236FF00BB8F8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2049D02C7236FF00BB8F8B /* Assets.xcassets */; };
@@ -44,8 +45,9 @@
 
 /* Begin PBXFileReference section */
 		547D0A192CE16AE400814D71 /* NutritionApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NutritionApp.entitlements; sourceTree = "<group>"; };
+		547D0A1D2CE1754200814D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5496822B2CE14F08001F8B57 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		5496822D2CE167D2001F8B57 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		5496822D2CE167D2001F8B57 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		FC2049C92C7236FD00BB8F8B /* NutritionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2049CC2C7236FD00BB8F8B /* NutritionAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionAppApp.swift; sourceTree = "<group>"; };
 		FC2049CE2C7236FD00BB8F8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547D0A1C2CE172FB00814D71 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +116,7 @@
 		FC2049CB2C7236FD00BB8F8B /* NutritionApp */ = {
 			isa = PBXGroup;
 			children = (
+				547D0A1D2CE1754200814D71 /* Info.plist */,
 				547D0A192CE16AE400814D71 /* NutritionApp.entitlements */,
 				5496822B2CE14F08001F8B57 /* MainView.swift */,
 				FC2049CC2C7236FD00BB8F8B /* NutritionAppApp.swift */,
@@ -126,7 +130,7 @@
 				FC2049D52C7236FF00BB8F8B /* Persistence.swift */,
 				FC2049D72C7236FF00BB8F8B /* NutritionApp.xcdatamodeld */,
 				FC2049D22C7236FF00BB8F8B /* Preview Content */,
-				5496822D2CE167D2001F8B57 /* TestView.swift */,
+				5496822D2CE167D2001F8B57 /* ScanView.swift */,
 			);
 			path = NutritionApp;
 			sourceTree = "<group>";
@@ -244,6 +248,9 @@
 				Base,
 			);
 			mainGroup = FC2049C02C7236FD00BB8F8B;
+			packageReferences = (
+				547D0A1A2CE172FB00814D71 /* XCLocalSwiftPackageReference "../SwiftPackages/CodeScanner" */,
+			);
 			productRefGroup = FC2049CA2C7236FD00BB8F8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,7 +300,7 @@
 				FC204A002C72681900BB8F8B /* WebService.swift in Sources */,
 				FC2049D92C7236FF00BB8F8B /* NutritionApp.xcdatamodeld in Sources */,
 				FC2049FE2C7267DA00BB8F8B /* Network+Error.swift in Sources */,
-				5496822E2CE167D2001F8B57 /* TestView.swift in Sources */,
+				5496822E2CE167D2001F8B57 /* ScanView.swift in Sources */,
 				FC7C3D8E2C72A83C002A3041 /* NutritionRequestResponse.swift in Sources */,
 				FC2049FC2C72485500BB8F8B /* NutritionViewModel.swift in Sources */,
 				FC2049CD2C7236FD00BB8F8B /* NutritionAppApp.swift in Sources */,
@@ -464,6 +471,8 @@
 				DEVELOPMENT_TEAM = GK5832N45W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NutritionApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to capture UPC barcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -494,6 +503,8 @@
 				DEVELOPMENT_TEAM = GK5832N45W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NutritionApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to capture UPC barcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -628,6 +639,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		547D0A1A2CE172FB00814D71 /* XCLocalSwiftPackageReference "../SwiftPackages/CodeScanner" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../SwiftPackages/CodeScanner;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		547D0A1B2CE172FB00814D71 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FC2049D72C7236FF00BB8F8B /* NutritionApp.xcdatamodeld */ = {

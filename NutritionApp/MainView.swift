@@ -14,9 +14,9 @@ struct MainView: View {
                 .tabItem {
                     Label("Lookup", systemImage: "magnifyingglass")
                 }
-            TestView()
+            ScanView()
                 .tabItem {
-                    Label("Test", systemImage: "wrench.and.screwdriver")
+                    Label("Scan", systemImage: "barcode.viewfinder")
                 }
         }
     }
