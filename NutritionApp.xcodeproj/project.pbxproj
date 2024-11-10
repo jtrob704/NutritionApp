@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5496822C2CE14F0E001F8B57 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5496822B2CE14F08001F8B57 /* MainView.swift */; };
+		5496822E2CE167D2001F8B57 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5496822D2CE167D2001F8B57 /* TestView.swift */; };
 		FC2049CD2C7236FD00BB8F8B /* NutritionAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049CC2C7236FD00BB8F8B /* NutritionAppApp.swift */; };
 		FC2049CF2C7236FD00BB8F8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2049CE2C7236FD00BB8F8B /* ContentView.swift */; };
 		FC2049D12C7236FF00BB8F8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2049D02C7236FF00BB8F8B /* Assets.xcassets */; };
@@ -41,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		547D0A192CE16AE400814D71 /* NutritionApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NutritionApp.entitlements; sourceTree = "<group>"; };
+		5496822B2CE14F08001F8B57 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5496822D2CE167D2001F8B57 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		FC2049C92C7236FD00BB8F8B /* NutritionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2049CC2C7236FD00BB8F8B /* NutritionAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionAppApp.swift; sourceTree = "<group>"; };
 		FC2049CE2C7236FD00BB8F8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +113,8 @@
 		FC2049CB2C7236FD00BB8F8B /* NutritionApp */ = {
 			isa = PBXGroup;
 			children = (
+				547D0A192CE16AE400814D71 /* NutritionApp.entitlements */,
+				5496822B2CE14F08001F8B57 /* MainView.swift */,
 				FC2049CC2C7236FD00BB8F8B /* NutritionAppApp.swift */,
 				FC2049FB2C72485500BB8F8B /* NutritionViewModel.swift */,
 				FC7C3D8D2C72A83C002A3041 /* NutritionRequestResponse.swift */,
@@ -119,6 +126,7 @@
 				FC2049D52C7236FF00BB8F8B /* Persistence.swift */,
 				FC2049D72C7236FF00BB8F8B /* NutritionApp.xcdatamodeld */,
 				FC2049D22C7236FF00BB8F8B /* Preview Content */,
+				5496822D2CE167D2001F8B57 /* TestView.swift */,
 			);
 			path = NutritionApp;
 			sourceTree = "<group>";
@@ -280,10 +288,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2049D62C7236FF00BB8F8B /* Persistence.swift in Sources */,
+				5496822C2CE14F0E001F8B57 /* MainView.swift in Sources */,
 				FC2049CF2C7236FD00BB8F8B /* ContentView.swift in Sources */,
 				FC204A002C72681900BB8F8B /* WebService.swift in Sources */,
 				FC2049D92C7236FF00BB8F8B /* NutritionApp.xcdatamodeld in Sources */,
 				FC2049FE2C7267DA00BB8F8B /* Network+Error.swift in Sources */,
+				5496822E2CE167D2001F8B57 /* TestView.swift in Sources */,
 				FC7C3D8E2C72A83C002A3041 /* NutritionRequestResponse.swift in Sources */,
 				FC2049FC2C72485500BB8F8B /* NutritionViewModel.swift in Sources */,
 				FC2049CD2C7236FD00BB8F8B /* NutritionAppApp.swift in Sources */,
@@ -447,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NutritionApp/NutritionApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NutritionApp/Preview Content\"";
@@ -476,6 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NutritionApp/NutritionApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NutritionApp/Preview Content\"";
