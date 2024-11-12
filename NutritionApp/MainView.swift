@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            ContentView()
+            ContentView(viewModel: <#T##NutritionViewModel#>)
                 .tabItem {
                     Label("Lookup", systemImage: "magnifyingglass")
                 }

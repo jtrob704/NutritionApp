@@ -33,11 +33,10 @@ class WebService {
         }
     }
     
-    // Function to perform GET request with query parameters
-    func getRequest(urlString: String, queryParameters: [String: String]?, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+    // Async function to perform GET request with query parameters
+    func getRequest(urlString: String, queryParameters: [String: String]?) async throws -> Data {
         guard var urlComponents = URLComponents(string: urlString) else {
-            print("Invalid URL")
-            return
+            throw URLError(.badURL)
         }
         
         // Add query parameters to URL
@@ -46,8 +45,7 @@ class WebService {
         }
         
         guard let url = urlComponents.url else {
-            print("Failed to construct URL with query parameters")
-            return
+            throw URLError(.badURL)
         }
         
         var request = URLRequest(url: url)
@@ -58,17 +56,14 @@ class WebService {
             request.setValue(apiKey2, forHTTPHeaderField: "x-rapidapi-host")
         }
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            completion(data, response, error)
-        }
-        task.resume()
+        let (data, _) = try await URLSession.shared.data(for: request)
+        return data
     }
     
-    // Function to perform POST request using both API keys
-    func postRequest(urlString: String, parameters: [String: Any], completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+    // Async function to perform POST request using both API keys
+    func postRequest(urlString: String, parameters: [String: Any]) async throws -> Data {
         guard let url = URL(string: urlString) else {
-            print("Invalid URL")
-            return
+            throw URLError(.badURL)
         }
         
         var request = URLRequest(url: url)
@@ -84,14 +79,11 @@ class WebService {
         
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
-        } catch let error {
-            print("Error encoding parameters: \(error.localizedDescription)")
-            return
+        } catch {
+            throw URLError(.cannotDecodeContentData)
         }
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            completion(data, response, error)
-        }
-        task.resume()
+        let (data, _) = try await URLSession.shared.data(for: request)
+        return data
     }
 }
